@@ -1,0 +1,47 @@
+<div class="container">
+    
+
+        <div class="main">
+            <p-card  [style]="{'width': '25rem','margin-bottom': '2em'}">
+            <h2>Please Login!</h2>
+            <div class="border">
+                
+                <form [formGroup]="formdata" (ngSubmit)="submit()" >
+                    <div class="first">
+                        <label for="float-input">UserName</label>
+                        
+                <span class="p-float-label">
+                    <input
+                    style="border: none; border-bottom: solid 1px"
+                    type="text"
+                    formControlName="username"
+                    pInputText
+                    required
+                    />
+                    <div
+                    style="color: red"
+                    *ngIf="
+                    formdata.controls['username'].invalid &&
+                    formdata.controls['username'].touched
+                    "
+                    >
+                    User Name Is Required
+                </div>
+            </span>
+        </div>
+        <div class="btn">
+            <button
+            [disabled]="!formdata.valid"
+            pButton
+            pRipple
+            type="button"
+            routerLink="/quiz"
+            label="Start"
+            class="p-button-raised p-button-warning p-button-text"
+            ></button>
+        </div>
+    </form>
+</div>
+</p-card>
+</div>
+</div>

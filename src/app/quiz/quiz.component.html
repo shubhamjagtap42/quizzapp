@@ -1,0 +1,100 @@
+<div class="container">
+  <h1>QUIZ</h1>
+
+  <div class="main">
+    <label for="input3" class="col-sm-4 control-label"
+      >Search Language for mock test:</label
+    >
+  </div>
+  <br />
+
+  <p-dropdown
+    [options]="languages"
+    [(ngModel)]="selectedvalue"
+    placeholder="select a lang"
+    (onChange)="getquestions()"
+  ></p-dropdown>
+</div> 
+<!-- <div *ngFor="let product of myarray; let i = index">
+
+    <li>
+        {{product.name}}
+
+          
+    <div *ngFor="let option of myarray[i].options">
+
+        <ol>
+            <input type="checkbox" pInputText />
+            {{option.name}}
+        </ol>
+    </div>
+</li>
+<br>
+<br> 
+     
+
+</div> -->
+
+<br />
+
+<span> Time {{ formatted_min }}:{{ formatted_sec }}</span>
+
+<div class="question" *ngIf="myarray1.length > 0 && num <= myarray1.length">
+  <li>
+    {{ myarray1[num].name }}
+
+    <div *ngFor="let option of myarray1[num].options">
+      <ol>
+        <p-radioButton
+          [inputId]="option"
+          name="option"
+          [value]="option"
+          [(ngModel)]="selectedCategory"
+          (onClick)="loadquiz(num)"
+        ></p-radioButton>
+        {{
+          option.name
+        }}
+
+    
+
+      </ol>
+     
+    </div>
+    <!-- <div *ngFor="let category of categories" class="field-checkbox">
+      <p-radioButton [inputId]="category.key" name="category" [value]="category" 
+      [(ngModel)]="selectedCategory" [disabled]="category.key === 'R'"></p-radioButton>
+      <label [for]="category.key">{{category.name}}</label>
+  </div> -->
+  </li>
+</div>
+
+<div>
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Prev"
+    class="p-button-success p-button-text"
+  ></button>
+
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Next"
+    (click)="getnext()"
+    class="p-button-success p-button-text"
+  ></button>
+  <br />
+  <br />
+  <button
+  pButton
+  pRipple
+  type="button"
+  (click)="postquestions()"
+  label="Submit"
+  class="p-button-success p-button-text"
+></button>
+  
+</div>

@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    margin-top: 40px;
+   
+}
+button + button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    padding: 10px;
+}
+.movetable{
+    margin-top: 15px;
+}

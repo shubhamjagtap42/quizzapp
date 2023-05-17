@@ -1,0 +1,16 @@
+body{
+
+    margin: 0;
+    padding: 0;
+}
+.image{
+    align-items: center;
+    display: flex;
+    margin-left: 40%;
+    margin-top: 20%;
+}
+img{
+    width: 10%;
+    display: flex;
+    
+}

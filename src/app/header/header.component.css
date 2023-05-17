@@ -1,0 +1,25 @@
+body{
+
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    border: solid 1px;
+    background-color: grey;
+
+}
+ul{
+    display: inline-flex;
+    margin: 10px;
+    width: 100%;
+    margin-left: 70%;
+
+    
+}
+ul li{
+    list-style: none;
+    margin-left: 20px;
+    color: white;
+    float: right;
+}
